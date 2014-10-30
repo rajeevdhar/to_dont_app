@@ -1,0 +1,19 @@
+<% include ../partials/header %>
+
+<h1>Edit this To Don't</h1>
+
+  <form action="/post/<%= post.id %>?_method=put" method="post">
+	<p>
+		<label for="title">Title:</label>
+    <input type="text" name="title" id="title" value = "<%= post.title %>">
+   </p>
+
+    <p>
+    <label for="body">Body:</label>
+    <input type="text" name="body" id="body" value = "<%= post.body %>">
+    </p>
+    
+    <input type="submit" value="Save">
+  </form>
+
+<% include ../partials/footer %>
